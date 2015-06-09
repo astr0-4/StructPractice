@@ -25,10 +25,10 @@ int main(int argc, const char * argv[]) {
     Box box3 = buildBox();
     Box box4 = buildAnotherBox();
     
-    printf("%f",volume(box3));
+    printf("%f \n",volume(box3));
     boxMaker(box3.l, box3.w, box3.h);
     float boxRatio = boxComparer(box4, box3);
-    printf("%f", boxRatio);
+    printf("%f \n", boxRatio);
 }
 
 Box buildBox() {
@@ -46,8 +46,6 @@ Box buildAnotherBox() {
     box.h = 24;
     return box;
 }
-
-
 
 float volume(Box box) {
     return box.l * box.w * box.h;
