@@ -22,29 +22,13 @@ Box buildAnotherBox();
 
 int main(int argc, const char * argv[]) {
     
-    Box box3 = buildBox();
-    Box box4 = buildAnotherBox();
+    Box box3 = boxMaker(12, 12, 13);
+    Box box4 = boxMaker(48, 27, 66);
     
     printf("%f \n",volume(box3));
     boxMaker(box3.l, box3.w, box3.h);
     float boxRatio = boxComparer(box4, box3);
     printf("%f \n", boxRatio);
-}
-
-Box buildBox() {
-    Box box;
-    box.l = 10;
-    box.w = 11;
-    box.h = 12;
-    return box;
-}
-
-Box buildAnotherBox() {
-    Box box;
-    box.l = 20;
-    box.w = 22;
-    box.h = 24;
-    return box;
 }
 
 float volume(Box box) {
